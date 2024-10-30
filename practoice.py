@@ -1,7 +1,13 @@
+import calendar
+
 print('hello world')
 
-def greet():
-    print('greetings')
+def greet(name):
+    print('greetings ' + name)
 
 name = input("Enter name ")
-print("This is you name " + name)
+greet(name)
+
+def printCallender():
+    cal = calendar.month(2024, 2)
+    print(cal)
