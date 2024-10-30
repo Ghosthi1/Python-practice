@@ -21,20 +21,33 @@ def randomInt(x,y):
 def ranMovie():
     movies = ["alladin","avrage avengers", 'endme']
     print(random.choice(movies))
+
+def Main():
+
+    listFunctions = ["Hello", "Callender", "random range", "Movie"]
+    print("Please choose one ", listFunctions)
+
+    function = input("What function? ")
     
-function = input("What function ")
 
-match function:
-    case "Hello":
-        Hello()
-    case "Callender":
-        printCallender()
-    case "random range":
-        min = input("Please enter min value ")
-        max = input("Please endter max value ")
-        randomInt(min,max)
-    case "Movie":
-        ranMovie()
+    match function:
+        case "Hello":
+            Hello()
+        case "Callender":
+            printCallender()
+        case  "random range":
+            min = input("Please enter min value ")
+            max = input("Please endter max value ")
+            randomInt(min,max)
+        case "Movie":
+            ranMovie()
+        case _:
+            print("Not in list")
+    
+    again = input("Run another? ")
+    if(again == "yes"):
+        Main()
 
 
+Main()
 
